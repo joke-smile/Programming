@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Programming.Model
+﻿namespace Programming.Model
 {
     /// <summary>
     /// Хранит данные о дисциплине.

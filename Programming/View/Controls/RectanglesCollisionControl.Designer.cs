@@ -54,7 +54,7 @@ namespace Programming.View.Controls
             this.RemoveSelectedRectangleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.RemoveSelectedRectangleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveSelectedRectangleButton.Image = global::Programming.Properties.Resources.rectangle_remove_24x24_uncolor;
-            this.RemoveSelectedRectangleButton.Location = new System.Drawing.Point(270, 169);
+            this.RemoveSelectedRectangleButton.Location = new System.Drawing.Point(279, 169);
             this.RemoveSelectedRectangleButton.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveSelectedRectangleButton.Name = "RemoveSelectedRectangleButton";
             this.RemoveSelectedRectangleButton.Size = new System.Drawing.Size(100, 32);
@@ -71,7 +71,7 @@ namespace Programming.View.Controls
             this.AddRectangleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.AddRectangleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddRectangleButton.Image = global::Programming.Properties.Resources.rectangle_add_24x24_uncolor;
-            this.AddRectangleButton.Location = new System.Drawing.Point(13, 169);
+            this.AddRectangleButton.Location = new System.Drawing.Point(15, 169);
             this.AddRectangleButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddRectangleButton.Name = "AddRectangleButton";
             this.AddRectangleButton.Size = new System.Drawing.Size(100, 32);
@@ -83,7 +83,7 @@ namespace Programming.View.Controls
             // 
             // RectangleSelectedHeightTextBox
             // 
-            this.RectangleSelectedHeightTextBox.Location = new System.Drawing.Point(71, 364);
+            this.RectangleSelectedHeightTextBox.Location = new System.Drawing.Point(73, 361);
             this.RectangleSelectedHeightTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.RectangleSelectedHeightTextBox.Name = "RectangleSelectedHeightTextBox";
             this.RectangleSelectedHeightTextBox.Size = new System.Drawing.Size(132, 22);
@@ -93,7 +93,7 @@ namespace Programming.View.Controls
             // RectangleSelectedHeightLabel
             // 
             this.RectangleSelectedHeightLabel.AutoSize = true;
-            this.RectangleSelectedHeightLabel.Location = new System.Drawing.Point(14, 370);
+            this.RectangleSelectedHeightLabel.Location = new System.Drawing.Point(16, 367);
             this.RectangleSelectedHeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RectangleSelectedHeightLabel.Name = "RectangleSelectedHeightLabel";
             this.RectangleSelectedHeightLabel.Size = new System.Drawing.Size(49, 16);
@@ -102,7 +102,7 @@ namespace Programming.View.Controls
             // 
             // RectangleSelectedWidthTextBox
             // 
-            this.RectangleSelectedWidthTextBox.Location = new System.Drawing.Point(71, 334);
+            this.RectangleSelectedWidthTextBox.Location = new System.Drawing.Point(73, 331);
             this.RectangleSelectedWidthTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.RectangleSelectedWidthTextBox.Name = "RectangleSelectedWidthTextBox";
             this.RectangleSelectedWidthTextBox.Size = new System.Drawing.Size(132, 22);
@@ -112,7 +112,7 @@ namespace Programming.View.Controls
             // RectangleSelectedWidthLabel
             // 
             this.RectangleSelectedWidthLabel.AutoSize = true;
-            this.RectangleSelectedWidthLabel.Location = new System.Drawing.Point(18, 340);
+            this.RectangleSelectedWidthLabel.Location = new System.Drawing.Point(20, 337);
             this.RectangleSelectedWidthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RectangleSelectedWidthLabel.Name = "RectangleSelectedWidthLabel";
             this.RectangleSelectedWidthLabel.Size = new System.Drawing.Size(44, 16);
@@ -121,7 +121,7 @@ namespace Programming.View.Controls
             // 
             // RectangleSelectedYTextBox
             // 
-            this.RectangleSelectedYTextBox.Location = new System.Drawing.Point(71, 304);
+            this.RectangleSelectedYTextBox.Location = new System.Drawing.Point(73, 301);
             this.RectangleSelectedYTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.RectangleSelectedYTextBox.Name = "RectangleSelectedYTextBox";
             this.RectangleSelectedYTextBox.Size = new System.Drawing.Size(132, 22);
@@ -131,7 +131,7 @@ namespace Programming.View.Controls
             // RectangleSelectedYLabel
             // 
             this.RectangleSelectedYLabel.AutoSize = true;
-            this.RectangleSelectedYLabel.Location = new System.Drawing.Point(46, 310);
+            this.RectangleSelectedYLabel.Location = new System.Drawing.Point(48, 307);
             this.RectangleSelectedYLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RectangleSelectedYLabel.Name = "RectangleSelectedYLabel";
             this.RectangleSelectedYLabel.Size = new System.Drawing.Size(19, 16);
@@ -140,7 +140,7 @@ namespace Programming.View.Controls
             // 
             // RectangleSelectedXTextBox
             // 
-            this.RectangleSelectedXTextBox.Location = new System.Drawing.Point(71, 274);
+            this.RectangleSelectedXTextBox.Location = new System.Drawing.Point(73, 271);
             this.RectangleSelectedXTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.RectangleSelectedXTextBox.Name = "RectangleSelectedXTextBox";
             this.RectangleSelectedXTextBox.Size = new System.Drawing.Size(132, 22);
@@ -150,7 +150,7 @@ namespace Programming.View.Controls
             // RectangleSelectedXLabel
             // 
             this.RectangleSelectedXLabel.AutoSize = true;
-            this.RectangleSelectedXLabel.Location = new System.Drawing.Point(44, 277);
+            this.RectangleSelectedXLabel.Location = new System.Drawing.Point(46, 274);
             this.RectangleSelectedXLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RectangleSelectedXLabel.Name = "RectangleSelectedXLabel";
             this.RectangleSelectedXLabel.Size = new System.Drawing.Size(18, 16);
@@ -160,7 +160,7 @@ namespace Programming.View.Controls
             // RectangleSelectedIdLabel
             // 
             this.RectangleSelectedIdLabel.AutoSize = true;
-            this.RectangleSelectedIdLabel.Location = new System.Drawing.Point(44, 250);
+            this.RectangleSelectedIdLabel.Location = new System.Drawing.Point(46, 247);
             this.RectangleSelectedIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RectangleSelectedIdLabel.Name = "RectangleSelectedIdLabel";
             this.RectangleSelectedIdLabel.Size = new System.Drawing.Size(21, 16);
@@ -170,7 +170,7 @@ namespace Programming.View.Controls
             // RectangleSelectedIdTextBox
             // 
             this.RectangleSelectedIdTextBox.Enabled = false;
-            this.RectangleSelectedIdTextBox.Location = new System.Drawing.Point(71, 244);
+            this.RectangleSelectedIdTextBox.Location = new System.Drawing.Point(73, 241);
             this.RectangleSelectedIdTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.RectangleSelectedIdTextBox.Name = "RectangleSelectedIdTextBox";
             this.RectangleSelectedIdTextBox.ReadOnly = true;
@@ -180,7 +180,7 @@ namespace Programming.View.Controls
             // SelectedRectangleLabel
             // 
             this.SelectedRectangleLabel.AutoSize = true;
-            this.SelectedRectangleLabel.Location = new System.Drawing.Point(10, 224);
+            this.SelectedRectangleLabel.Location = new System.Drawing.Point(12, 221);
             this.SelectedRectangleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SelectedRectangleLabel.Name = "SelectedRectangleLabel";
             this.SelectedRectangleLabel.Size = new System.Drawing.Size(129, 16);
@@ -196,13 +196,13 @@ namespace Programming.View.Controls
             this.CanvasPanel.Location = new System.Drawing.Point(398, 29);
             this.CanvasPanel.Margin = new System.Windows.Forms.Padding(15);
             this.CanvasPanel.Name = "CanvasPanel";
-            this.CanvasPanel.Size = new System.Drawing.Size(455, 436);
+            this.CanvasPanel.Size = new System.Drawing.Size(470, 451);
             this.CanvasPanel.TabIndex = 18;
             // 
             // RectanglesLabel
             // 
             this.RectanglesLabel.AutoSize = true;
-            this.RectanglesLabel.Location = new System.Drawing.Point(13, 9);
+            this.RectanglesLabel.Location = new System.Drawing.Point(12, 9);
             this.RectanglesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RectanglesLabel.Name = "RectanglesLabel";
             this.RectanglesLabel.Size = new System.Drawing.Size(79, 16);
@@ -213,10 +213,10 @@ namespace Programming.View.Controls
             // 
             this.RectanglesListBox.FormattingEnabled = true;
             this.RectanglesListBox.ItemHeight = 16;
-            this.RectanglesListBox.Location = new System.Drawing.Point(13, 29);
-            this.RectanglesListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.RectanglesListBox.Location = new System.Drawing.Point(15, 29);
+            this.RectanglesListBox.Margin = new System.Windows.Forms.Padding(15, 4, 4, 4);
             this.RectanglesListBox.Name = "RectanglesListBox";
-            this.RectanglesListBox.Size = new System.Drawing.Size(357, 132);
+            this.RectanglesListBox.Size = new System.Drawing.Size(364, 132);
             this.RectanglesListBox.TabIndex = 16;
             this.RectanglesListBox.SelectedIndexChanged += new System.EventHandler(this.RectanglesListBox_SelectedIndexChanged);
             // 

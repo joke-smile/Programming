@@ -11,7 +11,7 @@ namespace Programming.View.Controls
     public partial class SeasonsHandleControl : UserControl
     {
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="SeasonHandleControl"/>.
+        /// Создаёт экземпляр класса <see cref="SeasonsHandleControl"/>.
         /// </summary>
         public SeasonsHandleControl()
         {

@@ -80,7 +80,6 @@ namespace Programming.Model
         /// </summary>
         /// <param name="nameProperty">Имя свойства, откуда был вызван метод.</param>
         /// <param name="value">Строка.</param>
-        /// 
         /// <exception cref="ArgumentException">Выбрасывается,
         /// если строка состоит не только из букв английского алфавита.</exception>
         public static void AssertStringContainsOnlyLetters(string nameProperty, string value)

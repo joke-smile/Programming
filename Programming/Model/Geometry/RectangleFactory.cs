@@ -16,22 +16,22 @@ namespace Programming.Model.Geometry
         /// <summary>
         /// Минимальная ширина
         /// </summary>
-        private const int minWidth = 30;
+        private const int MinWidth = 30;
 
         /// <summary>
         /// Максимальная ширина
         /// </summary>
-        private const int maxWidth = 101;
+        private const int MaxWidth = 101;
 
         /// <summary>
         /// Минимальная высота
         /// </summary>
-        private const int minHeight = 30;
+        private const int MinHeight = 30;
 
         /// <summary>
         /// Максимальная высота
         /// </summary>
-        private const int maxHeight = 101;
+        private const int MaxHeight = 101;
 
         /// <summary>
         /// Генерация случайных значений.
@@ -56,8 +56,8 @@ namespace Programming.Model.Geometry
         {
             var colors = Enum.GetValues(typeof(Colors));
             Rectangle rectangle = new Rectangle();
-            rectangle.Width = _random.Next(minWidth, maxWidth);
-            rectangle.Height = _random.Next(minHeight, maxHeight);
+            rectangle.Width = _random.Next(MinWidth, MaxWidth);
+            rectangle.Height = _random.Next(MinHeight, MaxHeight);
             rectangle.Center = new Point2D(_random.Next(Margin, widthCanvas - rectangle.Width - Margin),
                                            _random.Next(Margin, heightCanvas - rectangle.Height - Margin));
             rectangle.Color = colors.GetValue(_random.Next(0, colors.Length)).ToString();

@@ -46,13 +46,10 @@ namespace Programming.Model
         /// </summary>
         /// <param name="releaseYear">Год выхода фильма.
         /// Значение должно быть в диапазоне от 1900 до нынешнего года (включительно).</param>
-        /// 
         /// <param name="durationMinutes">Продолжительность фильма в минутах.
         /// Значение должно быть положительным числом.</param>
-        /// 
         /// <param name="rating">Рейтинг фильма.
         /// Значение должно быть в диапазоне от 0 до 10 (включительно).</param>
-        /// 
         /// <param name="title">Название фильма.</param>
         /// <param name="genre">Жанр фильма.</param>
         public Movie(int releaseYear,
