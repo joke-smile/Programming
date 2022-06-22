@@ -23,7 +23,8 @@
         /// </summary>
         /// <param name="departure">Место отправления.</param>
         /// <param name="destination">Место прибытия.</param>
-        /// <param name="flightTimeMinutes">Время полёта в минутах. Значение должно быть положительным числом.</param>
+        /// <param name="flightTimeMinutes">Время полёта в минутах.
+        /// Значение должно быть положительным числом.</param>
         public Route(string departure,
                      string destination,
                      int flightTimeMinutes)
@@ -44,7 +45,8 @@
         public string Destination { get; set; }
 
         /// <summary>
-        /// Возвращает и задаёт время полёта в минутах. Значение должно быть положительным числом.
+        /// Возвращает и задаёт время полёта в минутах.
+        /// Значение должно быть положительным числом.
         /// </summary>
         public int FlightTimeMinutes
         {

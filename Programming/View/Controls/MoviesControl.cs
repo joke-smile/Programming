@@ -60,7 +60,8 @@ namespace Programming.View.Controls
         /// Находит фильм с наивысшим рейтингом.
         /// </summary>
         /// <param name="movies">Коллекция фильмов.</param>
-        /// <returns>Возвращает индекс элемента коллекции, чей рейтинг больше остальных.</returns>
+        /// <returns>Возвращает индекс элемента коллекции,
+        /// чей рейтинг больше остальных.</returns>
         private int FindMovieWithMaxRating(List<Movie> movies)
         {
             int maxRatingIndex = 0;

@@ -23,7 +23,8 @@
         /// </summary>
         /// <param name="author">Имя автора.</param>
         /// <param name="name">Название песни.</param>
-        /// <param name="durationSeconds">Продолжительность песни в секундах. Значение должно быть положительным числом.</param>
+        /// <param name="durationSeconds">Продолжительность песни в секундах.
+        /// Значение должно быть положительным числом.</param>
         public Song(string author,
                     string name,
                     int durationSeconds)
@@ -44,7 +45,8 @@
         public string Name { get; set; }
 
         /// <summary>
-        /// Возвращает и задаёт продолжительность песни в секундах. Значение должно быть положительным числом.
+        /// Возвращает и задаёт продолжительность песни в секундах.
+        /// Значение должно быть положительным числом.
         /// </summary>
         public int DurationSeconds
         {
