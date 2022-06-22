@@ -25,7 +25,8 @@ namespace Programming.Model
         /// </summary>
         /// <param name="name">Название дисциплины.</param>
         /// <param name="examDate">Дата экзамена по дисциплине.</param>
-        /// <param name="mark">Оценка по дисциплине. Значение должно быть в диапазоне от 2 до 5 (включительно).</param>
+        /// <param name="mark">Оценка по дисциплине.
+        /// Значение должно быть в диапазоне от 2 до 5 (включительно).</param>
         public Subject(string name,
                           string examDate,
                           int mark)

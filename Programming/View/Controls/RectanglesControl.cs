@@ -46,7 +46,7 @@ namespace Programming.View.Controls
             Rectangle[] rectangles = new Rectangle[ElementsCount];
             for (int i = 0; i < ElementsCount; i++)
             {
-                _currentRectangle = RectangleFactory.Randomize();
+                _currentRectangle = RectangleFactory.Randomize(300,300);
                 rectangles[i] = _currentRectangle;
                 RectangleListBox.Items.Add($"Rectangle {_currentRectangle.Id}");
             }

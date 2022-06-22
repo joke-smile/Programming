@@ -1,7 +1,7 @@
 ﻿namespace Programming.Model.Geometry
 {
     /// <summary>
-    /// Хранит Данные о координатах центра фигуры.
+    /// Хранит данные о координатах центра фигуры.
     /// </summary>
     public class Point2D
     {

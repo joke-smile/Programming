@@ -39,6 +39,7 @@ namespace Programming.View.Controls
             // 
             // IntValueTextBox
             // 
+            this.IntValueTextBox.Enabled = false;
             this.IntValueTextBox.Location = new System.Drawing.Point(253, 26);
             this.IntValueTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.IntValueTextBox.Name = "IntValueTextBox";

@@ -30,7 +30,7 @@ namespace Programming.Model
         /// <summary>
         /// Цвет при выборе Winter в списке времен года.
         /// </summary>
-        public static Color Winter = Color.FromArgb(48, 213, 200);
+        public static Color Winter = Color.White;
 
         /// <summary>
         /// Цвет при выборе Spring в списке времен года.

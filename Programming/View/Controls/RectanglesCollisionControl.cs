@@ -44,7 +44,7 @@ namespace Programming.View.Controls
         /// </summary>
         /// <param name="rectangle">Прямоугольник.</param>
         /// <returns>Возвращает форматированный текст.</returns>
-        private string SetRectangleParameters(Rectangle rectangle)
+        private string SetRectangleDiscription(Rectangle rectangle)
         {
             return $"{rectangle.Id}: " +
                    $"(X: {rectangle.Center.X};" +
@@ -106,11 +106,11 @@ namespace Programming.View.Controls
         /// <param name="rectangle">Прямоугольник.</param>
         private void UpdateRectangleInfo(Rectangle rectangle)
         {
-            int index = RectanglesListBox.FindString(rectangle.Id.ToString());
+            int index = _rectangles.IndexOf(rectangle);
 
             if (index == -1) return;
 
-            RectanglesListBox.Items[index] = SetRectangleParameters(rectangle);
+            RectanglesListBox.Items[index] = SetRectangleDiscription(rectangle);
         }
 
         private void AddButton_MouseEnter(object sender, EventArgs e)
@@ -137,7 +137,7 @@ namespace Programming.View.Controls
         {
             _currentRectangle = RectangleFactory.Randomize(CanvasPanel.Width, CanvasPanel.Height);
             _rectangles.Add(_currentRectangle);
-            RectanglesListBox.Items.Add(SetRectangleParameters(_currentRectangle));
+            RectanglesListBox.Items.Add(SetRectangleDiscription(_currentRectangle));
 
             Panel rectanglePanel = InitPanel();
             _rectanglePanels.Add(rectanglePanel);
@@ -159,7 +159,7 @@ namespace Programming.View.Controls
 
             foreach (var rectangle in _rectangles)
             {
-                RectanglesListBox.Items.Add(SetRectangleParameters(rectangle));
+                RectanglesListBox.Items.Add(SetRectangleDiscription(rectangle));
                 RectanglesListBox.SelectedIndex = 0;
             }
 

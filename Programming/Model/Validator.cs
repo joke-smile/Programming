@@ -76,7 +76,8 @@ namespace Programming.Model
         /// </summary>
         /// <param name="nameProperty">Имя свойства, откуда был вызван метод.</param>
         /// <param name="value">Строка.</param>
-        /// <exception cref="ArgumentException">Выбрасывается, если строка состоит не только из букв английского алфавита.</exception>
+        /// <exception cref="ArgumentException">Выбрасывается,
+        /// если строка состоит не только из букв английского алфавита.</exception>
         public static void AssertStringContainsOnlyLetters(string nameProperty, string value)
         {
             if (!Regex.IsMatch(value, @"^[a-zA-Z]+$"))
@@ -91,7 +92,8 @@ namespace Programming.Model
         /// </summary>
         /// <param name="nameProperty">Имя свойства, откуда был вызван метод.</param>
         /// <param name="value">Строка.</param>
-        /// <exception cref="ArgumentException">Выбрасывается, если строка состоит не только из цифр.</exception>
+        /// <exception cref="ArgumentException">Выбрасывается,
+        /// если строка состоит не только из цифр.</exception>
         public static void AssertValueContainsOnlyDigits(string nameProperty, string value)
         {
             if (!long.TryParse(value, out long number))
