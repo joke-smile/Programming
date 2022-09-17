@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ListOfFlights.Model;
 
-namespace ListOfFlights
+namespace ListOfFlights.View
 {
     public partial class MainForm : Form
     {
@@ -32,8 +32,8 @@ namespace ListOfFlights
 
         private void FlightTimeTextBox_TextChanged(object sender, EventArgs e)
         {
-            double time = double.Parse(FlightTimeTextBox.Text);
-            Validator.AssertValueInRange(nameof(FlightTimeTextBox_TextChanged), time, 0, 1000);
+            //double time = double.Parse(FlightTimeTextBox.Text);
+            //Validator.AssertValueInRange(nameof(FlightTimeTextBox_TextChanged), time, 0, 1000);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace ListOfFlights
+﻿namespace ListOfFlights.View
 {
     partial class MainForm
     {
@@ -165,7 +165,6 @@
         #endregion
 
         private System.Windows.Forms.ListBox FlightsListBox;
-        private System.Windows.Forms.TextBox DeparturePointTextBox;
         private System.Windows.Forms.TextBox DestinationTextBox;
         private System.Windows.Forms.DateTimePicker DepartureTimeDateTimePicker;
         private System.Windows.Forms.TextBox FlightTimeTextBox;
@@ -175,6 +174,7 @@
         private System.Windows.Forms.Label FlightTimeLabel;
         private System.Windows.Forms.Label DepartureTimeLabel;
         private System.Windows.Forms.Label FlightTypeLabel;
+        public System.Windows.Forms.TextBox DeparturePointTextBox;
     }
 }
 

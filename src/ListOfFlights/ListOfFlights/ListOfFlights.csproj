@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Model\AppColors.cs" />
     <Compile Include="Model\FlightType.cs" />
-    <Compile Include="Model\proba.cs" />
+    <Compile Include="Model\FlightInfo.cs" />
     <Compile Include="Model\Validator.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
