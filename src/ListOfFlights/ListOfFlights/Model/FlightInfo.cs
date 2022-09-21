@@ -43,7 +43,7 @@ namespace ListOfFlights.Model
             }
             set
             {
-                Validator.AssertValueInRange(nameof(FlightTime), value, 1, 1000);
+                //Validator.AssertValueInRange(nameof(FlightTime), value, 1, 1000);
                 _flightTime = value;
             }
         }
@@ -59,7 +59,7 @@ namespace ListOfFlights.Model
             }
             set
             {
-                Validator.AssertValueInRange(nameof(DeparturePoint), value.Length, 1, 100);
+                //Validator.AssertValueInRange(nameof(DeparturePoint), value.Length, 1, 100);
                 _departurePoint = value;
             }
         }
@@ -72,7 +72,7 @@ namespace ListOfFlights.Model
             }
             set
             {
-                Validator.AssertData(value);
+                //Validator.AssertData(value);
                 _departureData = value;
             }
         }
@@ -96,7 +96,7 @@ namespace ListOfFlights.Model
             }
             set
             {
-                Validator.AssertValueInRange(nameof(Destination), value.Length, 1, 100);
+                //Validator.AssertValueInRange(nameof(Destination), value.Length, 1, 100);
                 _destination = value;
             }
         }

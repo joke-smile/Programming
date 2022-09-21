@@ -78,6 +78,7 @@
             this.DepartureTimeDateTimePicker.Name = "DepartureTimeDateTimePicker";
             this.DepartureTimeDateTimePicker.Size = new System.Drawing.Size(321, 22);
             this.DepartureTimeDateTimePicker.TabIndex = 3;
+            this.DepartureTimeDateTimePicker.ValueChanged += new System.EventHandler(this.DepartureTimeDateTimePicker_ValueChanged);
             // 
             // FlightTimeTextBox
             // 

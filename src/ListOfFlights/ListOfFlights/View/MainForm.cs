@@ -20,7 +20,7 @@ namespace ListOfFlights.View
         public MainForm()
         {
             InitializeComponent();
-            DepartureTimeDateTimePicker.MinDate = DateTime.Now;
+            //DepartureTimeDateTimePicker.MinDate = DateTime.Now;
             
 
             Array typeValues = Enum.GetValues(typeof(FlightType));
@@ -28,7 +28,6 @@ namespace ListOfFlights.View
             {
                 FlightTypeComboBox.Items.Add(value);
             }
-            FlightTypeComboBox.SelectedIndex = 0;
         }
 
         private void AddButtonClick(object sender, EventArgs e)
@@ -74,6 +73,12 @@ namespace ListOfFlights.View
         {
             if (FlightTypeComboBox.SelectedItem == null) return;
             _current.Type = (FlightType)FlightTypeComboBox.SelectedItem;
+        }
+
+        private void DepartureTimeDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            _current.DepartureData = DepartureTimeDateTimePicker.Value;
+            UpdateFlightsListBox();
         }
     }
 }
