@@ -5,5 +5,4 @@
         interior,
         international
     }
-
 }

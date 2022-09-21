@@ -42,5 +42,14 @@ namespace ListOfFlights.Model
                     $"be between {min} and {max} (inclusive)");
             }
         }
+
+        public static void AssertData(DateTime selectedData)
+        {
+            if (selectedData < DateTime.Now.Date)
+            { 
+                throw new ArgumentException(
+                    $"Некоректная дата.");
+            }
+        }
     }
 }

@@ -2,6 +2,9 @@
 
 namespace ListOfFlights.Model
 {
+    /// <summary>
+    /// Хранит информацию о полёте.
+    /// </summary>
     public class FlightInfo
     {
         /// <summary>
@@ -14,6 +17,24 @@ namespace ListOfFlights.Model
         /// </summary>
         private double _flightTime;
 
+        /// <summary>
+        /// Место назначения.
+        /// </summary>
+        private string _destination;
+
+        /// <summary>
+        /// Время вылета.
+        /// </summary>
+        private DateTime _departureData = DateTime.Now;
+
+        /// <summary>
+        /// Тип вылета.
+        /// </summary>
+        private FlightType _type;
+
+        /// <summary>
+        /// Возвращает и задаёт значение времени в полёте.
+        /// </summary>
         public double FlightTime
         {
             get
@@ -26,6 +47,10 @@ namespace ListOfFlights.Model
                 _flightTime = value;
             }
         }
+
+        /// <summary>
+        /// Возвращает и задаёт значение места отправления.
+        /// </summary>
         public string DeparturePoint
         {
             get
@@ -38,33 +63,21 @@ namespace ListOfFlights.Model
                 _departurePoint = value;
             }
         }
-        /// <summary>
-        /// Место назначения.
-        /// </summary>
-        private string _destination;
 
-        /// <summary>
-        /// Время вылета.
-        /// </summary>
-        private DateTime _departureTime;
-
-        public DateTime DepartureTime
+        public DateTime DepartureData
         {
             get
             {
-                return _departureTime;
+                return _departureData;
             }
             set
             {
-                _departureTime = value;
+                Validator.AssertData(value);
+                _departureData = value;
             }
         }
-        /// <summary>
-        /// Тип вылета.
-        /// </summary>
-        private string _type;
 
-        public string Type
+        public FlightType Type
         {
             get
             {
@@ -72,7 +85,7 @@ namespace ListOfFlights.Model
             }
             set
             {
-                
+                _type = value;
             }
         }
         public string Destination
@@ -84,15 +97,41 @@ namespace ListOfFlights.Model
             set
             {
                 Validator.AssertValueInRange(nameof(Destination), value.Length, 1, 100);
-                Destination = value;
+                _destination = value;
             }
         }
-        public FlightInfo(string departurePoint, string destination, double flightTime, string type)
+
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="FlightInfo"/>
+        /// </summary>
+        /// <param name="departurePoint">Место отправления. <br/>
+        /// Должно иметь не больше 100 символов.</param>
+        /// <param name="destination">Место назначения. <br/>
+        /// Должно иметь не больше 100 символов.</param>
+        /// <param name="flightTime">Время полёта. <br/>
+        /// Должно быть не больше 1000 минут</param>
+        /// <param name="type">Тип перелёта. </param>
+        /// <param name="departureData">Дата вылета. <br/>
+        /// Должна быть не раньше сегодняшнего дня</param>
+        public FlightInfo(string departurePoint, string destination, double flightTime, FlightType type, DateTime departureData)
         {
             DeparturePoint = departurePoint;
             Destination = destination;
             FlightTime = flightTime;
             Type = type;
+            DepartureData = departureData;
+
+        }
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="FlightInfo"/>
+        /// </summary>
+        public FlightInfo()
+        {
+            
+        }
+        public string FlightDescription()
+        {
+            return $"{DepartureData} : {DeparturePoint} - {Destination}";
         }
     }
 }

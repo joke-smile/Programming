@@ -39,6 +39,8 @@
             this.FlightTimeLabel = new System.Windows.Forms.Label();
             this.DepartureTimeLabel = new System.Windows.Forms.Label();
             this.FlightTypeLabel = new System.Windows.Forms.Label();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.RemoveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FlightsListBox
@@ -66,6 +68,7 @@
             this.DestinationTextBox.Name = "DestinationTextBox";
             this.DestinationTextBox.Size = new System.Drawing.Size(230, 22);
             this.DestinationTextBox.TabIndex = 2;
+            this.DestinationTextBox.TextChanged += new System.EventHandler(this.DestinationTextBox_TextChanged);
             // 
             // DepartureTimeDateTimePicker
             // 
@@ -83,7 +86,6 @@
             this.FlightTimeTextBox.Size = new System.Drawing.Size(321, 22);
             this.FlightTimeTextBox.TabIndex = 4;
             this.FlightTimeTextBox.TextChanged += new System.EventHandler(this.FlightTimeTextBox_TextChanged);
-            this.FlightTimeTextBox.Validated += new System.EventHandler(this.FlightTimeTextBox_TextChanged);
             // 
             // FlightTypeComboBox
             // 
@@ -92,6 +94,7 @@
             this.FlightTypeComboBox.Name = "FlightTypeComboBox";
             this.FlightTypeComboBox.Size = new System.Drawing.Size(321, 24);
             this.FlightTypeComboBox.TabIndex = 5;
+            this.FlightTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.FlightTypeComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -138,11 +141,33 @@
             this.FlightTypeLabel.TabIndex = 10;
             this.FlightTypeLabel.Text = "Тип вылета";
             // 
+            // AddButton
+            // 
+            this.AddButton.Location = new System.Drawing.Point(12, 394);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(107, 44);
+            this.AddButton.TabIndex = 11;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButtonClick);
+            // 
+            // RemoveButton
+            // 
+            this.RemoveButton.Location = new System.Drawing.Point(158, 394);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(105, 44);
+            this.RemoveButton.TabIndex = 12;
+            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButtonClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RemoveButton);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.FlightTypeLabel);
             this.Controls.Add(this.DepartureTimeLabel);
             this.Controls.Add(this.FlightTimeLabel);
@@ -174,7 +199,9 @@
         private System.Windows.Forms.Label FlightTimeLabel;
         private System.Windows.Forms.Label DepartureTimeLabel;
         private System.Windows.Forms.Label FlightTypeLabel;
-        public System.Windows.Forms.TextBox DeparturePointTextBox;
+        private System.Windows.Forms.TextBox DeparturePointTextBox;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button RemoveButton;
     }
 }
 
