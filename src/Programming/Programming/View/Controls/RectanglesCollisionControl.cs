@@ -50,11 +50,11 @@ namespace Programming.View.Controls
         /// <summary>
         /// Находит пересекающиеся прямоугольники и перекрашивает их.
         /// </summary>
-        private void FindContact()
+        private void FindCollision()
         {
             for (int k = 0; k < _rectangles.Count; k++)
             {
-                CanvasPanel.Controls[k].BackColor = AppColors.UnContact;
+                CanvasPanel.Controls[k].BackColor = AppColors.NonContact;
             }
 
             for (int i = 0; i < _rectangles.Count - 1; i++)
@@ -83,6 +83,10 @@ namespace Programming.View.Controls
             RectangleSelectedHeightTextBox.Clear();
         }
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Panel"/>
+        /// </summary>
+        /// <returns>Возвращает новую панель.</returns>
         private Panel InitPanel()
         {
             Panel rectanglePanel = new Panel
@@ -90,7 +94,7 @@ namespace Programming.View.Controls
                 Width = _currentRectangle.Width,
                 Height = _currentRectangle.Height,
                 Location = new Point(_currentRectangle.Center.X, _currentRectangle.Center.Y),
-                BackColor = AppColors.UnContact
+                BackColor = AppColors.NonContact
             };
 
             return rectanglePanel;
@@ -138,7 +142,7 @@ namespace Programming.View.Controls
             Panel rectanglePanel = InitPanel();
             CanvasPanel.Controls.Add(rectanglePanel);
             RectanglesListBox.SelectedIndex = _rectangles.Count - 1;
-            FindContact();
+            FindCollision();
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -158,7 +162,7 @@ namespace Programming.View.Controls
                 RectanglesListBox.SelectedIndex = 0;
             }
 
-            FindContact();
+            FindCollision();
         }
 
         private void RectanglesXTextBox_TextChanged(object sender, EventArgs e)
@@ -172,7 +176,7 @@ namespace Programming.View.Controls
                 _currentRectangle.Center.X = xRectangleValue;
                 CanvasPanel.Controls[RectanglesListBox.SelectedIndex].Location =
                     new Point(_currentRectangle.Center.X, _currentRectangle.Center.Y);
-                FindContact();
+                FindCollision();
                 UpdateRectangleInfo(_currentRectangle);
             }
             catch
@@ -194,7 +198,7 @@ namespace Programming.View.Controls
                 _currentRectangle.Center.Y = yRectangleValue;
                 CanvasPanel.Controls[RectanglesListBox.SelectedIndex].Location =
                     new Point(_currentRectangle.Center.X, _currentRectangle.Center.Y);
-                FindContact();
+                FindCollision();
                 UpdateRectangleInfo(_currentRectangle);
             }
             catch
@@ -215,7 +219,7 @@ namespace Programming.View.Controls
                 int widthRectangleValue = int.Parse(currentWidthRectangle);
                 _currentRectangle.Width = widthRectangleValue;
                 CanvasPanel.Controls[RectanglesListBox.SelectedIndex].Width = _currentRectangle.Width;
-                FindContact();
+                FindCollision();
                 UpdateRectangleInfo(_currentRectangle);
             }
             catch
@@ -236,7 +240,7 @@ namespace Programming.View.Controls
                 int heightRectangleValue = int.Parse(currentHeightRectangle);
                 _currentRectangle.Height = heightRectangleValue;
                 CanvasPanel.Controls[RectanglesListBox.SelectedIndex].Height = _currentRectangle.Height;
-                FindContact();
+                FindCollision();
                 UpdateRectangleInfo(_currentRectangle);
             }
             catch

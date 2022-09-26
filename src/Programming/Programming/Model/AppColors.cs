@@ -25,7 +25,7 @@ namespace Programming.Model
         /// <summary>
         /// Цвет непересекающейся фигуры.
         /// </summary>
-        public static Color UnContact = Color.FromArgb(127, 127, 255, 127);
+        public static Color NonContact = Color.FromArgb(127, 127, 255, 127);
 
         /// <summary>
         /// Цвет при выборе Winter в списке времен года.
