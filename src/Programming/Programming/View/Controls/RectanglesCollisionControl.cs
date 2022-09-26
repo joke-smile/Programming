@@ -54,7 +54,7 @@ namespace Programming.View.Controls
         {
             for (int k = 0; k < _rectangles.Count; k++)
             {
-                CanvasPanel.Controls[k].BackColor = AppColors.NonContact;
+                CanvasPanel.Controls[k].BackColor = AppColors.NonCollision;
             }
 
             for (int i = 0; i < _rectangles.Count - 1; i++)
@@ -63,8 +63,8 @@ namespace Programming.View.Controls
                 {
                     if (CollisionManager.IsCollision(_rectangles[i], _rectangles[j]))
                     {
-                        CanvasPanel.Controls[i].BackColor = AppColors.InContact;
-                        CanvasPanel.Controls[j].BackColor = AppColors.InContact;
+                        CanvasPanel.Controls[i].BackColor = AppColors.InCollision;
+                        CanvasPanel.Controls[j].BackColor = AppColors.InCollision;
                     }
                 }
             }
@@ -94,7 +94,7 @@ namespace Programming.View.Controls
                 Width = _currentRectangle.Width,
                 Height = _currentRectangle.Height,
                 Location = new Point(_currentRectangle.Center.X, _currentRectangle.Center.Y),
-                BackColor = AppColors.NonContact
+                BackColor = AppColors.NonCollision
             };
 
             return rectanglePanel;
