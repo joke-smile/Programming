@@ -51,6 +51,7 @@
             this.FlightsListBox.Name = "FlightsListBox";
             this.FlightsListBox.Size = new System.Drawing.Size(303, 356);
             this.FlightsListBox.TabIndex = 0;
+            this.FlightsListBox.SelectedIndexChanged += new System.EventHandler(this.FlightsListBox_SelectedIndexChanged);
             // 
             // DeparturePointTextBox
             // 
@@ -74,11 +75,11 @@
             // 
             this.DepartureTimeDateTimePicker.Location = new System.Drawing.Point(431, 121);
             this.DepartureTimeDateTimePicker.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.DepartureTimeDateTimePicker.MinDate = new System.DateTime(2022, 9, 22, 9, 41, 14, 0);
+            this.DepartureTimeDateTimePicker.MinDate = new System.DateTime(2022, 9, 28, 0, 0, 0, 0);
             this.DepartureTimeDateTimePicker.Name = "DepartureTimeDateTimePicker";
             this.DepartureTimeDateTimePicker.Size = new System.Drawing.Size(321, 22);
             this.DepartureTimeDateTimePicker.TabIndex = 3;
-            this.DepartureTimeDateTimePicker.Value = new System.DateTime(2022, 9, 22, 9, 41, 14, 0);
+            this.DepartureTimeDateTimePicker.Value = new System.DateTime(2022, 9, 28, 0, 0, 0, 0);
             this.DepartureTimeDateTimePicker.ValueChanged += new System.EventHandler(this.DepartureTimeDateTimePicker_ValueChanged);
             // 
             // FlightTimeTextBox
