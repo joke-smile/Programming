@@ -42,7 +42,6 @@ namespace ListOfFlights.View
             _listOfFlights.Add(_current);
             FlightsListBox.Items.Add(_current.FlightDescription());
             FlightsListBox.SelectedIndex = _listOfFlights.Count - 1;
-            ClearTextBox();
         }
 
         private void RemoveButtonClick(object sender, EventArgs e)
@@ -52,31 +51,24 @@ namespace ListOfFlights.View
             int index = FlightsListBox.SelectedIndex;
             _listOfFlights.RemoveAt(index);
             FlightsListBox.Items.RemoveAt(index);
-
             ClearTextBox();
 
             if (FlightsListBox.Items.Count == 0) return;
             FlightsListBox.SelectedIndex = 0;
-
-            UpdateInformation(_current);
         }
 
         private void DeparturePointTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (FlightsListBox.SelectedIndex == -1 && DeparturePointTextBox.Text.Length > 0)
-            {
-                DeparturePointTextBox.BackColor = AppColors.ErrorColor;
-                return;
-            }
-            else if (FlightsListBox.SelectedIndex == -1 && DeparturePointTextBox.Text.Length == 0)
-            {
-                DeparturePointTextBox.BackColor = AppColors.CorrectColor;
-                return;
-            }
-
-            DeparturePointTextBox.BackColor = AppColors.CorrectColor;
             _current.DeparturePoint = DeparturePointTextBox.Text;
             UpdateFlightsListBox();
+        }
+
+        private void ClearTextBox()
+        {
+            DeparturePointTextBox.Clear();
+            DestinationTextBox.Clear();
+            FlightTypeComboBox.Text = "";
+            FlightTimeTextBox.Clear();
         }
 
         private void UpdateFlightsListBox()
@@ -93,29 +85,13 @@ namespace ListOfFlights.View
 
         private void DestinationTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (FlightsListBox.SelectedIndex == -1 && DestinationTextBox.Text.Length > 0)
-            {
-                DestinationTextBox.BackColor = AppColors.ErrorColor;
-                return;
-            }
-            else if (FlightsListBox.SelectedIndex == -1 && DestinationTextBox.Text.Length == 0)
-            {
-                DestinationTextBox.BackColor = AppColors.CorrectColor;
-                return;
-            }
-            DestinationTextBox.BackColor = AppColors.CorrectColor;
             _current.Destination = DestinationTextBox.Text;
             UpdateFlightsListBox();
         }
 
         private void FlightTimeTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (FlightsListBox.SelectedIndex == -1 && FlightTimeTextBox.Text.Length > 0)
-            {
-                FlightTimeTextBox.BackColor = AppColors.ErrorColor;
-                return;
-            }
-            else if (FlightsListBox.SelectedIndex == -1 || FlightTimeTextBox.Text.Length == 0)
+            if (FlightTimeTextBox.Text.Length == 0)
             {
                 FlightTimeTextBox.BackColor = AppColors.CorrectColor;
                 return;
@@ -134,40 +110,33 @@ namespace ListOfFlights.View
 
         private void FlightTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (FlightsListBox.SelectedIndex == -1)
-            {
-                FlightTypeComboBox.BackColor = AppColors.ErrorColor;
-                return;
-            }
-
-            try
-            {
-                FlightTypeComboBox.BackColor = AppColors.CorrectColor;
-                _current.Type = (FlightType)FlightTypeComboBox.SelectedItem;
-            }
-            catch
-            {
-                FlightTypeComboBox.BackColor = AppColors.ErrorColor;
-            }
-        }
-
-        private void ClearTextBox()
-        {
-            DeparturePointTextBox.Clear();
-            DestinationTextBox.Clear();
-            FlightTimeTextBox.Clear();
-            FlightTypeComboBox.Text = "";
+            _current.Type = (FlightType)FlightTypeComboBox.SelectedItem;
+            UpdateFlightsListBox();
         }
 
         private void DepartureTimeDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             if (FlightsListBox.SelectedIndex == -1)
             {
-                DepartureTimeDateTimePicker.CalendarTrailingForeColor = AppColors.ErrorColor;
                 return;
             }
-            DepartureTimeDateTimePicker.CalendarTrailingForeColor = AppColors.CorrectColor;
+
             _current.DepartureData = DepartureTimeDateTimePicker.Value;
+
+            //for (int i = 0; i < FlightsListBox.Items.Count; i++)
+            //{
+            //    for (int j = i; j < FlightsListBox.Items.Count; j++)
+            //    {
+            //        if (_listOfFlights[i].DepartureData < _listOfFlights[j].DepartureData)
+            //        {
+            //            List<FlightInfo> _tempList = new List<FlightInfo>();
+            //            _tempList[0] = _listOfFlights[j];
+            //            _listOfFlights[j] = _listOfFlights[i];
+            //            _listOfFlights[i] = _tempList[0];
+            //        }
+            //    }
+            //}
+
             UpdateFlightsListBox();
         }
 
