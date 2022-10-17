@@ -51,7 +51,6 @@ namespace ListOfFlights.View
             int index = FlightsListBox.SelectedIndex;
             _listOfFlights.RemoveAt(index);
             FlightsListBox.Items.RemoveAt(index);
-            ClearTextBox();
 
             if (FlightsListBox.Items.Count == 0) return;
             FlightsListBox.SelectedIndex = 0;
@@ -69,6 +68,7 @@ namespace ListOfFlights.View
             DestinationTextBox.Clear();
             FlightTypeComboBox.Text = "";
             FlightTimeTextBox.Clear();
+            DepartureTimeDateTimePicker.Value = DateTime.Now;
         }
 
         private void UpdateFlightsListBox()
@@ -94,6 +94,7 @@ namespace ListOfFlights.View
             if (FlightTimeTextBox.Text.Length == 0)
             {
                 FlightTimeTextBox.BackColor = AppColors.CorrectColor;
+                _current.FlightTime = 0;
                 return;
             }
 
