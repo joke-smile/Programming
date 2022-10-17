@@ -123,21 +123,6 @@ namespace ListOfFlights.View
             }
 
             _current.DepartureData = DepartureTimeDateTimePicker.Value;
-
-            //for (int i = 0; i < FlightsListBox.Items.Count; i++)
-            //{
-            //    for (int j = i; j < FlightsListBox.Items.Count; j++)
-            //    {
-            //        if (_listOfFlights[i].DepartureData < _listOfFlights[j].DepartureData)
-            //        {
-            //            List<FlightInfo> _tempList = new List<FlightInfo>();
-            //            _tempList[0] = _listOfFlights[j];
-            //            _listOfFlights[j] = _listOfFlights[i];
-            //            _listOfFlights[i] = _tempList[0];
-            //        }
-            //    }
-            //}
-
             UpdateFlightsListBox();
         }
 
