@@ -47,9 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Customer.cs" />
+    <Compile Include="Services\AppColors.cs" />
     <Compile Include="Services\IdGenerator.cs" />
     <Compile Include="Model\Item.cs" />
-    <Compile Include="Model\Validator.cs" />
     <Compile Include="Services\ValueValidator.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
@@ -65,6 +65,12 @@
     <Compile Include="View\Tabs\ItemsTab.Designer.cs">
       <DependentUpon>ItemsTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Tabs\CustomersTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Tabs\CustomersTab.Designer.cs">
+      <DependentUpon>CustomersTab.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +83,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Tabs\CustomersTab.resx">
+      <DependentUpon>CustomersTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Tabs\ItemsTab.resx">
       <DependentUpon>ItemsTab.cs</DependentUpon>
     </EmbeddedResource>

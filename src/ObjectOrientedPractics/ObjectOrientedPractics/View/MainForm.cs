@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ItemsTab = ObjectOrientedPractics.View.Tabs.ItemsTab;
 
 namespace ObjectOrientedPractics
 {
@@ -15,6 +16,13 @@ namespace ObjectOrientedPractics
         public MainForm()
         {
             InitializeComponent();
+            
+            
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

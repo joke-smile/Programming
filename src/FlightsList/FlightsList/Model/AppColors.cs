@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace ListOfFlights.Model
+namespace FlightsList.Model
 {
     /// <summary>
     /// Хранит данные о вызываемых цветах.

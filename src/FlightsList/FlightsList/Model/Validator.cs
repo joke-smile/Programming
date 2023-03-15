@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ListOfFlights.Model
+namespace FlightsList.Model
 {
     /// <summary>
     /// Предоставляет методы для проверки входных данных.
@@ -39,16 +39,7 @@ namespace ListOfFlights.Model
             if (value < min || value > max)
             {
                 throw new ArgumentException($"the value of the {nameProperty} field should " +
-                    $"be between {min} and {max} (inclusive)");
-            }
-        }
-
-        public static void AssertData(DateTime selectedData)
-        {
-            if (selectedData < DateTime.Now.Date)
-            { 
-                throw new ArgumentException(
-                    $"Некоректная дата.");
+                   $"be between {min} and {max} (inclusive)");
             }
         }
     }

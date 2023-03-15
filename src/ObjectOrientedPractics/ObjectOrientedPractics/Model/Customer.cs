@@ -2,6 +2,9 @@
 using ObjectOrientedPractics.Services;
 namespace ObjectOrientedPractics.Model
 {
+    /// <summary>
+    /// Содержит информацию о потребителе.
+    /// </summary>
     public class Customer
     {
         /// <summary>
@@ -21,8 +24,9 @@ namespace ObjectOrientedPractics.Model
 
         /// <summary>
         /// Возвращает и задаёт полное имя покупателя.
+        /// Должно содержать до 200 символов (включительно).
         /// </summary>
-        public string Fullname
+        public string FullName
         {
             get
             {
@@ -30,13 +34,14 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                ValueValidator.AssertStringOnLength(value, 200, nameof(Fullname));
+                ValueValidator.AssertStringOnLength(value, 200, nameof(FullName));
                 _fullname = value;
             }
         }
 
         /// <summary>
         /// Возвращает и задаёт адрес доставки покупателя.
+        /// Должно содержать до 500 символов (включительно).
         /// </summary>
         public string Address
         {
@@ -61,17 +66,23 @@ namespace ObjectOrientedPractics.Model
         public Customer(string fullname, string address)
         {
             _id = GetId();
-            Fullname = fullname;
+            FullName = fullname;
             Address = address;
         }
+
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Customer"/>
         /// </summary>
         public Customer()
         {
             _id = GetId();
-            Fullname = "fullname";
+            FullName = "fullname";
             Address = "address";
         }
+
+        /// <summary>
+        /// Возвращает ID покупателя.
+        /// </summary>
+        public int Id { get { return _id; } }
     }
 }

@@ -72,7 +72,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                Validator.AssertValueInRange(value, 0, 100000, nameof(Cost));
+                AssertValueInRange(value, 0, 100000, nameof(Cost));
                 _cost = value;
             }
         }
@@ -104,5 +104,6 @@ namespace ObjectOrientedPractics.Model
             Name = "name";
             Cost = 0;
         }
+        public int Id { get { return _id; } }
     }
 }
