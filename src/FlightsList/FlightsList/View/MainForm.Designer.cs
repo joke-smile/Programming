@@ -55,7 +55,7 @@
             this.FlightsListBox.ItemHeight = 16;
             this.FlightsListBox.Location = new System.Drawing.Point(14, 12);
             this.FlightsListBox.Name = "FlightsListBox";
-            this.FlightsListBox.Size = new System.Drawing.Size(297, 372);
+            this.FlightsListBox.Size = new System.Drawing.Size(297, 468);
             this.FlightsListBox.TabIndex = 0;
             this.FlightsListBox.SelectedIndexChanged += new System.EventHandler(this.FlightsListBox_SelectedIndexChanged);
             // 
@@ -67,7 +67,7 @@
             this.DeparturePointTextBox.Margin = new System.Windows.Forms.Padding(10);
             this.DeparturePointTextBox.MaxLength = 3000;
             this.DeparturePointTextBox.Name = "DeparturePointTextBox";
-            this.DeparturePointTextBox.Size = new System.Drawing.Size(368, 22);
+            this.DeparturePointTextBox.Size = new System.Drawing.Size(371, 22);
             this.DeparturePointTextBox.TabIndex = 1;
             this.DeparturePointTextBox.TextChanged += new System.EventHandler(this.DeparturePointTextBox_TextChanged);
             // 
@@ -79,7 +79,7 @@
             this.DestinationTextBox.Margin = new System.Windows.Forms.Padding(10);
             this.DestinationTextBox.MaxLength = 3000;
             this.DestinationTextBox.Name = "DestinationTextBox";
-            this.DestinationTextBox.Size = new System.Drawing.Size(368, 22);
+            this.DestinationTextBox.Size = new System.Drawing.Size(371, 22);
             this.DestinationTextBox.TabIndex = 2;
             this.DestinationTextBox.TextChanged += new System.EventHandler(this.DestinationTextBox_TextChanged);
             // 
@@ -198,7 +198,7 @@
             this.SelectedFlightPanel.Location = new System.Drawing.Point(321, 12);
             this.SelectedFlightPanel.Margin = new System.Windows.Forms.Padding(5);
             this.SelectedFlightPanel.Name = "SelectedFlightPanel";
-            this.SelectedFlightPanel.Size = new System.Drawing.Size(550, 180);
+            this.SelectedFlightPanel.Size = new System.Drawing.Size(543, 180);
             this.SelectedFlightPanel.TabIndex = 13;
             // 
             // SelectedFlightLabel
@@ -221,7 +221,8 @@
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.ForeColor = System.Drawing.SystemColors.Control;
             this.AddButton.Image = global::FlightsList.Properties.Resources.add_24x24;
-            this.AddButton.Location = new System.Drawing.Point(14, 390);
+            this.AddButton.Location = new System.Drawing.Point(14, 486);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(34, 35);
             this.AddButton.TabIndex = 11;
@@ -239,7 +240,8 @@
             this.RemoveButton.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.RemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveButton.Image")));
-            this.RemoveButton.Location = new System.Drawing.Point(54, 390);
+            this.RemoveButton.Location = new System.Drawing.Point(54, 486);
+            this.RemoveButton.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(34, 35);
             this.RemoveButton.TabIndex = 12;
@@ -252,11 +254,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 450);
+            this.ClientSize = new System.Drawing.Size(878, 527);
             this.Controls.Add(this.SelectedFlightPanel);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.FlightsListBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(750, 300);
             this.Name = "MainForm";
             this.Text = "FlightsList";
