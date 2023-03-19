@@ -13,7 +13,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{620B85D1-25CC-4BFA-8803-B1B2A50EF251}
+AppId={{10E71E76-B9A8-48EC-BC79-E3105D853235}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -24,10 +24,10 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 ChangesAssociations=yes
 DisableProgramGroupPage=yes
-LicenseFile=E:\Программирование\Projects\C#\22.06 прога\Programming\LICENSE.TXT
+LicenseFile=E:\Программирование\Projects\C#\Programming\LICENSE.TXT
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=E:\Программирование\Projects\C#\22.06 прога\Programming\install
+OutputDir=E:\Программирование\Projects\C#\Programming\install
 OutputBaseFilename=FlightsList
 SetupIconFile=C:\Users\Львец\Downloads\adept_installer_9772.ico
 Compression=lzma
@@ -42,11 +42,11 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "E:\Программирование\Projects\C#\22.06 прога\Programming\src\FlightsList\FlightsList\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Программирование\Projects\C#\22.06 прога\Programming\src\FlightsList\FlightsList\bin\Release\FlightsList.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Программирование\Projects\C#\22.06 прога\Programming\src\FlightsList\FlightsList\bin\Release\FlightsList.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Программирование\Projects\C#\22.06 прога\Programming\src\FlightsList\FlightsList\bin\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Программирование\Projects\C#\22.06 прога\Programming\src\FlightsList\FlightsList\bin\Release\Newtonsoft.Json.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\FlightsList.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\FlightsList.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\Newtonsoft.Json.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
