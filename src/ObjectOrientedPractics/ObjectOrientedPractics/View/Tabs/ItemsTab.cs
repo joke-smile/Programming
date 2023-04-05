@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using ObjectOrientedPractics.Model;
 using ObjectOrientedPractics.Services;
+using ObjectOrientedPractics.Model.Enums;
 
 namespace ObjectOrientedPractics.View.Tabs
 {
@@ -24,7 +25,12 @@ namespace ObjectOrientedPractics.View.Tabs
         public ItemsTab()
         {
             InitializeComponent();
-            DisabledItemsTextBoxes();
+            DisabledItemsInterface();
+            Array categories = Enum.GetValues(typeof(Category));
+            foreach(Category category in categories)
+            {
+                ItemsCategoryComboBox.Items.Add(category);
+            }
         }
 
         /// <summary>
@@ -58,21 +64,24 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <summary>
         /// Включает поля для ввода пользователем.
         /// </summary>
-        private void EnabledItemsTextBoxes()
+        private void EnabledItemsInterface()
         {
             ItemCostTextBox.Enabled = true;
             ItemNameTextBox.Enabled = true;
             ItemInfoTextBox.Enabled = true;
+            ItemsCategoryComboBox.Enabled = true;
         }
 
         /// <summary>
         /// Отключает поля для ввода пользователем.
         /// </summary>
-        private void DisabledItemsTextBoxes()
+        private void DisabledItemsInterface()
         {
             ItemCostTextBox.Enabled = false;
             ItemNameTextBox.Enabled = false;
             ItemInfoTextBox.Enabled = false;
+            ItemsCategoryComboBox.Enabled = false;
+            
         }
 
         /// <summary>
@@ -92,7 +101,7 @@ namespace ObjectOrientedPractics.View.Tabs
             var item = new Item();
             _items.Add(item);
             UpdateListBox(_items.IndexOf(item));
-            EnabledItemsTextBoxes();
+            EnabledItemsInterface();
         }
 
         private void RemoveItemButton_Click(object sender, EventArgs e)
@@ -106,14 +115,14 @@ namespace ObjectOrientedPractics.View.Tabs
 
             if (_items.Count == 0)
             {
-                DisabledItemsTextBoxes();
+                DisabledItemsInterface();
                 UpdateListBox(-1);
                 ClearInfo();
             }
             else
             {
                 UpdateListBox(0);
-                EnabledItemsTextBoxes();
+                EnabledItemsInterface();
             }
         }
 
@@ -122,17 +131,31 @@ namespace ObjectOrientedPractics.View.Tabs
             if (ItemsListBox.SelectedIndex == -1) return;
 
 
-            EnabledItemsTextBoxes();
+            EnabledItemsInterface();
             _currentItem = _items[ItemsListBox.SelectedIndex];
             ItemIdTextBox.Text = _currentItem.Id.ToString();
             ItemCostTextBox.Text = _currentItem.Cost.ToString();
-            ItemNameTextBox.Text = _currentItem.Name;
+            if (_currentItem.Name.Length == 0)
+            {
+                ItemNameTextBox.Text = "name";
+            }
+            else
+            {
+                ItemNameTextBox.Text = _currentItem.Name;
+            }
             ItemInfoTextBox.Text = _currentItem.Info;
+            ItemsCategoryComboBox.Text = _currentItem.Category.ToString();
         }
 
         private void ItemCostTextBox_TextChanged(object sender, EventArgs e)
         {
             if (ItemsListBox.SelectedIndex == -1) return;
+
+            if (ItemCostTextBox.Text.Length == 0)
+            {
+                ItemCostTextBox.BackColor = AppColors.CorrectColor;
+                return;
+            }
 
             try
             {
@@ -173,6 +196,23 @@ namespace ObjectOrientedPractics.View.Tabs
             catch
             {
                 ItemInfoTextBox.BackColor = AppColors.ErrorColor;
+            }
+        }
+
+        private void ItemsCategoryComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            _currentItem.Category = (Category)ItemsCategoryComboBox.SelectedItem;
+        }
+
+        private void ItemsCategoryComboBox_TextChanged(object sender, EventArgs e)
+        {
+            Array categories = Enum.GetValues(typeof(Category));
+            foreach (var category in categories)
+            {
+                if (category.ToString() == ItemsCategoryComboBox.Text)
+                {
+                    _currentItem.Category = (Category)category;
+                }
             }
         }
     }

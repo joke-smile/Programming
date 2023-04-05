@@ -24,12 +24,12 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 ChangesAssociations=yes
 DisableProgramGroupPage=yes
-LicenseFile=E:\Программирование\Projects\C#\Programming\LICENSE.TXT
+LicenseFile=..\LICENSE.TXT
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=E:\Программирование\Projects\C#\Programming\install
+OutputDir=..\install
 OutputBaseFilename=FlightsList
-SetupIconFile=C:\Users\Львец\Downloads\adept_installer_9772.ico
+SetupIconFile=..\src\FlightsList\FlightsList\Resources\adept_installer_9772.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -42,11 +42,11 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\FlightsList.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\FlightsList.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\Программирование\Projects\C#\Programming\src\FlightsList\FlightsList\bin\Release\Newtonsoft.Json.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\FlightsList\FlightsList\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\FlightsList\FlightsList\bin\Release\FlightsList.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\FlightsList\FlightsList\bin\Release\FlightsList.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\FlightsList\FlightsList\bin\Release\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\src\FlightsList\FlightsList\bin\Release\Newtonsoft.Json.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]

@@ -135,6 +135,22 @@ namespace FlightsList.View
 
         }
 
+        private void UpdateInformation(FlightInfo flight)
+        {
+            DeparturePointTextBox.Text = flight.DeparturePoint;
+            DestinationTextBox.Text = flight.Destination;
+            DepartureTimeDateTimePicker.Value = flight.DepartureDate;
+            if (flight.FlightTime != 0)
+            {
+                FlightTimeTextBox.Text = Convert.ToString(flight.FlightTime);
+            }
+            else
+            {
+                FlightTimeTextBox.Text = "";
+            }
+            FlightTypeComboBox.SelectedItem = flight.Type;
+        }
+
         private void FlightsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (FlightsListBox.SelectedIndex == -1)
@@ -212,22 +228,6 @@ namespace FlightsList.View
             _current.DepartureDate = DepartureTimeDateTimePicker.Value;
             SortFlights();
             UpdateListBox(_flightsList.IndexOf(_current));
-        }
-
-        public void UpdateInformation(FlightInfo flight)
-        {
-            DeparturePointTextBox.Text = flight.DeparturePoint;
-            DestinationTextBox.Text = flight.Destination;
-            DepartureTimeDateTimePicker.Value = flight.DepartureDate;
-            if (flight.FlightTime != 0)
-            {
-                FlightTimeTextBox.Text = Convert.ToString(flight.FlightTime);
-            }
-            else
-            {
-                FlightTimeTextBox.Text = "";
-            }
-            FlightTypeComboBox.SelectedItem = flight.Type;
         }
 
         private void FlightTypeComboBox_TextChanged(object sender, EventArgs e)

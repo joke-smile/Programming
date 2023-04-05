@@ -5,7 +5,7 @@
     /// </summary>
     public enum FlightType 
     {
-        interior,
-        international
+        Interior,
+        International
     }
 }

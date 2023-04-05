@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="maps.ico" />
+    <None Include="Resources\adept_installer_9772.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

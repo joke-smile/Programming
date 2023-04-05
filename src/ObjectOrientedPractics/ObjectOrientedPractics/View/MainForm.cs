@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ItemsTab = ObjectOrientedPractics.View.Tabs.ItemsTab;
+using ObjectOrientedPractics.Model;
+using ObjectOrientedPractics.View.Tabs;
 
 namespace ObjectOrientedPractics
 {
@@ -16,7 +10,6 @@ namespace ObjectOrientedPractics
         public MainForm()
         {
             InitializeComponent();
-            
             
         }
 
